@@ -12,13 +12,21 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { setShowSearch, getCartCount, navigate, token, setToken, setCartItems } = useContext(ShopContext);
 
-  const logout = () => {
-    navigate('/login');
-    localStorage.removeItem('token');
-    setToken('');
-    setCartItems({});
-  };
+  // const getCartCount = () => {
+  //   return Object.values(cartItems).reduce((sum, item) => sum + item.quantity, 0);
+  // };
+  
+//   useEffect(() => {
+//     console.log("Cart items updated:", cartItems);
+// }, [cartItems]);
 
+
+  const logout = () => {
+    navigate('/login')
+    localStorage.removeItem('token')
+    setToken('')
+    setCartItems({})
+  }
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
   };
@@ -58,13 +66,13 @@ const Navbar = () => {
 
         {/* User Profile Dropdown */}
         <div className='group relative'>
-          <FontAwesomeIcon onClick={() => token ? null : navigate('/login')} className='cursor-pointer sm:h-6 sm:w-6 h-5 w-5' icon={faUser} />
-          {token &&
-            <div className='hidden group-hover:flex flex-col absolute right-0 w-28  bg-white shadow-lg rounded-md py-3 px-4 text-gray-600'>
+          <FontAwesomeIcon onClick={()=> token ? null : navigate('/login')} className='cursor-pointer sm:h-6 sm:w-6 h-5 w-5' icon={faUser} />
+          {token && 
+              <div className='hidden group-hover:flex flex-col absolute right-0 w-28  bg-white shadow-lg rounded-md py-3 px-4 text-gray-600'>
               <p className='cursor-pointer hover:text-black'>My Profile</p>
-              <p onClick={() => navigate("/orders")} className='cursor-pointer hover:text-black'>Orders</p>
+              <p onClick={()=>navigate("/orders")} className='cursor-pointer hover:text-black'>Orders</p>
               <p onClick={logout} className='cursor-pointer hover:text-black'>Logout</p>
-            </div>
+              </div>
           }
         </div>
 
@@ -83,7 +91,10 @@ const Navbar = () => {
       </div>
 
       {/* Sidebar Menu */}
-      <div className={`fixed top-0 left-0 h-full bg-white shadow-lg transition-all duration-300 ${isOpen ? 'w-64' : 'w-0 overflow-hidden'}`}>
+      <div
+        className={`fixed top-0 left-0 h-full bg-white shadow-lg transition-all duration-300 ${isOpen ? 'w-64' : 'w-0 overflow-hidden'
+          }`}
+      >
         <div className='flex flex-col text-gray-600'>
           <div onClick={() => setIsOpen(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
             <ChevronLeft className="h-4 rotate-180" />
