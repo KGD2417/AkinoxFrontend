@@ -193,7 +193,7 @@ function ShopContextProvider({ children }) {
         currency,
         delivery_fee,
         search, setSearch, showSearch, setShowSearch,
-        cartItems, addToCart,
+        cartItems,setCartItem, addToCart,
         getCartCount,
         updateQuantity,
         getCartAmount,
