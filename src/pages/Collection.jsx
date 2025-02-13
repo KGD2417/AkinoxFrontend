@@ -25,7 +25,6 @@ const Collection = () => {
   const tooggleSubCategory = (e) => {
     if (subCategory.includes(e.target.value)) {
         setSubCategory(prev=> prev.filter(item=>item !== e.target.value))
-
     }
     else{
         setSubCategory(prev =>[...prev,e.target.value])
@@ -123,7 +122,7 @@ const Collection = () => {
               <input className="w-3" type="checkbox" value={'Digital'} onChange={tooggleSubCategory} />Digital
             </p>
             <p className="flex gap-2">
-              <input className="w-3" type="checkbox" value={'Analog-Digital'} onChange={tooggleSubCategory} />Analog+Digital
+              <input className="w-3" type="checkbox" value={'Analog+Digital'} onChange={tooggleSubCategory} />Analog+Digital
             </p>
           </div>
         </div>
