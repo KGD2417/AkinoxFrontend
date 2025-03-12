@@ -25,7 +25,7 @@ AkinoxFrontend is the **React.js-based frontend** for the Akinox Watches E-Comme
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/yourusername/AkinoxFrontend.git
+git clone https://github.com/KGD2417/AkinoxFrontend.git
 cd AkinoxFrontend
 ```
 
@@ -61,5 +61,5 @@ src/
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries, contact [your email or GitHub profile link].
+For any queries, contact kshitijdesai179@gmail.com.
 
