@@ -69,7 +69,7 @@ const Navbar = () => {
           <FontAwesomeIcon onClick={()=> token ? null : navigate('/login')} className='cursor-pointer sm:h-6 sm:w-6 h-5 w-5' icon={faUser} />
           {token && 
               <div className='hidden group-hover:flex flex-col absolute right-0 w-28  bg-white shadow-lg rounded-md py-3 px-4 text-gray-600'>
-              <p className='cursor-pointer hover:text-black'>My Profile</p>
+              <p onClick={()=>navigate("/profile")} className='cursor-pointer hover:text-black'>My Profile</p>
               <p onClick={()=>navigate("/orders")} className='cursor-pointer hover:text-black'>Orders</p>
               <p onClick={logout} className='cursor-pointer hover:text-black'>Logout</p>
               </div>

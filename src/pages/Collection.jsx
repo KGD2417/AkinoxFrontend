@@ -134,7 +134,7 @@ const Collection = () => {
                 <Title text1={'ALL'} text2={'COLLECTIONS'} />
 
                 <select onChange={(e)=>setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2">
-                <option value="relevant">Sort by: Relevant</option>
+                <option value="relevant">Sort by: None</option>
                 <option value="low-high">Sort by: Low to High</option>
                 <option value="high-low">Sort by: High to Low</option>
                 </select>

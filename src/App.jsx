@@ -14,6 +14,7 @@ import PlaceOrder from './pages/PlaceOrder'
 import Orders from './pages/Orders'
 import Navbar from './component/Navbar'
 import Login from './pages/Login.jsx'
+import Profile from './pages/Profile.jsx'
 import Fotter from './component/Fotter.jsx'
 import SearchBar from './component/SearchBar.jsx'
 import { ToastContainer, toast } from 'react-toastify';
@@ -36,6 +37,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/palce-order' element={<PlaceOrder/>} />
           <Route path='/orders' element={<Orders/>} />
+          <Route path='/profile' element={<Profile/>} />
           <Route path='/contact' element={<Contact/>} />
         </Routes>
         <Fotter/>
